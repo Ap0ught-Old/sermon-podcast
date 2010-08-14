@@ -1,4 +1,5 @@
 class Sermon < ActiveRecord::Base
+ belongs_to :user
  
   has_attached_file :audio, 
     :storage => :s3,

@@ -1,24 +1,34 @@
-<h1>Listing sermons</h1>
+<h1>Trinity United Methodist Church</h1>
+<h2>Palm Beach Gardens, FL</h2>
 
 <table>
-  <tr>
-    <th>Title</th>
-    <th>Date</th>
-    <th>Description</th>
-  </tr>
 
 <% @sermons.each do |sermon| %>
-  <tr>
-    <td><%=h sermon.title %></td>
-    <td><%=h sermon.date %></td>
-    <td><%=h sermon.description %></td>
-    <td><%= link_to 'Show', sermon %></td>
-    <td><%= link_to 'Edit', edit_sermon_path(sermon) %></td>
-    <td><%= link_to 'Destroy', sermon, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+  <p>
+	  <b>Title:</b>
+	  <%=h sermon.title %>
+	</p>
+
+	<p>
+	  <b>Date:</b>
+	  <%=h sermon.date %>
+	</p>
+
+	<p>
+	  <b>Description:</b>
+	  <%=h sermon.description %>
+	</p>
+  
+    <p><%= link_to 'Show', sermon %></p>
+		<% if current_user != nil && current_user.admin == true %>
+    	<p><%= link_to 'Destroy', sermon, :confirm => 'Are you sure?', :method => :delete %></p>
+		<% end %>
+  
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New sermon', new_sermon_path %>
+<% if current_user != nil && current_user.admin == true %>
+	<%= link_to 'New sermon', new_sermon_path %>
+<% end %>
