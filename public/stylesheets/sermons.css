@@ -64,10 +64,10 @@ h1, h2	{
 
 #individual_sermon {
 	
-	text-align: center;
+	text-align: left;
 }
 
 #sermons {
-	width: 500px;
+	width: 400px;
 	margin: 0 auto;
 }

@@ -3,7 +3,7 @@
 	<head>
 	  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 	  <title>Podcasts | Trinity UMC, PBG, FL</title>
-	  <%= stylesheet_link_tag 'scaffold' %>
+	  <%= stylesheet_link_tag 'sermons' %>
 		<%= formtastic_stylesheet_link_tag %>
 	</head>
 	<body>
@@ -12,8 +12,5 @@
 
 		<%= yield %>
 		
-		<% if current_user == nil %>
-			<p style='margin: 0; float: left;'><%= link_to 'sign in', sign_in_url%></p>
-		<% end %>
 	</body>
 </html>

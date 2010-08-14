@@ -34,3 +34,7 @@
 <% if current_user != nil && current_user.admin == true %>
 	<%= link_to 'New sermon', new_sermon_path %>
 <% end %>
+
+<% if current_user == nil %>
+	<p style='margin: 0; float: left;'><%= link_to 'sign in', sign_in_url%></p>
+<% end %>
