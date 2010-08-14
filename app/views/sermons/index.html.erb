@@ -1,31 +1,33 @@
 <h1>Trinity United Methodist Church</h1>
 <h2>Palm Beach Gardens, FL</h2>
 
-<table>
+<div id='sermons'>
+	<table>
+		<% @sermons.each do |sermon| %>
+		  <div id='individual_sermon'>
+				<p>
+				  <b>Title:</b>
+				  <%=h  link_to sermon.title, sermon  %>
+				</p>
 
-<% @sermons.each do |sermon| %>
-  <p>
-	  <b>Title:</b>
-	  <%=h sermon.title %>
-	</p>
+				<p>
+				  <b>Date:</b>
+				  <%=h sermon.date %>
+				</p>
 
-	<p>
-	  <b>Date:</b>
-	  <%=h sermon.date %>
-	</p>
-
-	<p>
-	  <b>Description:</b>
-	  <%=h sermon.description %>
-	</p>
-  
-    <p><%= link_to 'Show', sermon %></p>
-		<% if current_user != nil && current_user.admin == true %>
-    	<p><%= link_to 'Destroy', sermon, :confirm => 'Are you sure?', :method => :delete %></p>
+				<p>
+				  <b>Description:</b>
+				  <%=h sermon.description %>
+				</p>
+ 		
+				<% if current_user != nil && current_user.admin == true %>
+			    <p><%= link_to 'Destroy', sermon, :confirm => 'Are you sure?', :method => :delete %></p>
+				<% end %>
+		 </div>
+		<br />
 		<% end %>
-  
-<% end %>
-</table>
+	</table>
+</div>
 
 <br />
 

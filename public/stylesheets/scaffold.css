@@ -61,3 +61,13 @@ a:hover { color: #fff; background-color:#000; }
 h1, h2	{
 	text-align: center;
 }
+
+#individual_sermon {
+	
+	text-align: center;
+}
+
+#sermons {
+	width: 500px;
+	margin: 0 auto;
+}
