@@ -23,6 +23,18 @@ config.action_view.cache_template_loading            = true
 
 # Disable delivery errors, bad email addresses will be ignored
 # config.action_mailer.raise_delivery_errors = false
+config.action_mailer.delivery_method = :smtp
+config.action_mailer.default_url_options = { :host => 'sermon-podcast.heroku.com' }
+config.action_mailer.smtp_settings = {
+  :tls => true,
+  :enable_starttls_auto => true,
+  :address => "smtp.gmail.com",
+  :port => 587,
+  :domain => "fosheefam.com",
+  :user_name => "brian@fosheefam.com",
+  :password => "RubberDucki3",
+  :authentication => :plain
+}
 
 # Enable threaded mode
 # config.threadsafe!
