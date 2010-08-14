@@ -2,6 +2,8 @@ ActionController::Routing::Routes.draw do |map|
     
   map.resources :sermons  
 
+  map.sign_up '/sign_up', :controller => 'sermons', :action => 'index'
+  
   Clearance::Routes.draw(map)
   CaptainOveur::Routes.draw(map)
   
