@@ -1,8 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
-
+  map.root :controller => "sermons"
+  
   map.resources :sermons  
   
-  map.root :controller => 'sermons'
   
   # The priority is based upon order of creation: first created -> highest priority.
 
