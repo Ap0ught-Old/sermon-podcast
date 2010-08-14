@@ -32,7 +32,7 @@ config.action_mailer.smtp_settings = {
   :port => 587,
   :domain => "fosheefam.com",
   :user_name => "brian@fosheefam.com",
-  :password => "RubberDucki3",
+  :password => "RubberDuckie",
   :authentication => :plain
 }
 
