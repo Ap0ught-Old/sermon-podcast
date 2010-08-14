@@ -1,0 +1,28 @@
+<p>
+  <b>Title:</b>
+  <%=h @sermon.title %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%=h @sermon.date %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @sermon.description %>
+</p>
+
+<p>
+  <b>Video url:</b>
+  <%=h @sermon.video_url %>
+</p>
+
+<p>
+  <b>Audio url:</b>
+  <%=h @sermon.audio_url %>
+</p>
+
+
+<%= link_to 'Edit', edit_sermon_path(@sermon) %> |
+<%= link_to 'Back', sermons_path %>
