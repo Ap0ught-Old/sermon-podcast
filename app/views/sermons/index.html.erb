@@ -5,8 +5,6 @@
     <th>Title</th>
     <th>Date</th>
     <th>Description</th>
-    <th>Video url</th>
-    <th>Audio url</th>
   </tr>
 
 <% @sermons.each do |sermon| %>
@@ -14,8 +12,6 @@
     <td><%=h sermon.title %></td>
     <td><%=h sermon.date %></td>
     <td><%=h sermon.description %></td>
-    <td><%=h sermon.video_url %></td>
-    <td><%=h sermon.audio_url %></td>
     <td><%= link_to 'Show', sermon %></td>
     <td><%= link_to 'Edit', edit_sermon_path(sermon) %></td>
     <td><%= link_to 'Destroy', sermon, :confirm => 'Are you sure?', :method => :delete %></td>

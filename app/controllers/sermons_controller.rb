@@ -2,7 +2,7 @@ class SermonsController < ApplicationController
   # GET /sermons
   # GET /sermons.xml
   def index
-    @sermons = Sermon.all(:limit => 5, :order => 'date desc')
+    @sermons = Sermon.find(:all, :limit => 5, :order => 'date asc')
 
     respond_to do |format|
       format.html # index.html.erb

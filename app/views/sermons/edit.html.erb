@@ -16,13 +16,8 @@
     <%= f.text_area :description %>
   </p>
   <p>
-    <%= f.label :video_url %><br />
-    <%= f.text_field :video_url %>
-  </p>
-  <p>
-    <%= f.label :audio_url %><br />
-    <%= f.text_field :audio_url %>
-  </p>
+		<%= f.file_field :audio %>
+	</p>
   <p>
     <%= f.submit 'Update' %>
   </p>

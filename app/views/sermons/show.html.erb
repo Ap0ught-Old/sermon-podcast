@@ -12,15 +12,8 @@
   <b>Description:</b>
   <%=h @sermon.description %>
 </p>
-
 <p>
-  <b>Video url:</b>
-  <%=h @sermon.video_url %>
-</p>
-
-<p>
-  <b>Audio url:</b>
-  <%=h @sermon.audio_url %>
+	<audio src="<%=@sermon.audio %>" controls="controls"> Your browser does not support</audio>
 </p>
 
 

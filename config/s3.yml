@@ -1,0 +1,14 @@
+development:
+  bucket_name: sermon_podcast
+  access_key_id: AKIAJ4UDY23TJMX5KG6Q
+  secret_access_key: 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
+
+test:
+  bucket_name: sermon_podcast
+  access_key_id: AKIAJ4UDY23TJMX5KG6Q
+  secret_access_key: 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
+
+production:
+  bucket_name: sermon_podcast
+  access_key_id: AKIAJ4UDY23TJMX5KG6Q
+  secret_access_key: 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
