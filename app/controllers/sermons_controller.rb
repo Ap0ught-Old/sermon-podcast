@@ -1,5 +1,5 @@
 class SermonsController < ApplicationController
-  before_filter :authenticate, :only => [ :update, :destroy, :edit ]
+  before_filter :authenticate, :only => [ :update, :destroy, :edit, :new ]
   
   # GET /sermons
   # GET /sermons.xml
