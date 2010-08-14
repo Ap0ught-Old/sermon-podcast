@@ -11,6 +11,9 @@
 		<p style="color: green"><%= notice %></p>
 
 		<%= yield %>
-		<p style='margin: 0; float: left;'><%= link_to 'sign in', sign_in_url%></p>
+		
+		<% if current_user == nil %>
+			<p style='margin: 0; float: left;'><%= link_to 'sign in', sign_in_url%></p>
+		<% end %>
 	</body>
 </html>
