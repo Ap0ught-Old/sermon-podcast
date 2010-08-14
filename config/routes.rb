@@ -1,10 +1,12 @@
 ActionController::Routing::Routes.draw do |map|
-  Clearance::Routes.draw(map)
-  CaptainOveur::Routes.draw(map)
+  
   
   map.resources :sermons  
   
   map.root :controller => "sermons"
+
+  Clearance::Routes.draw(map)
+  CaptainOveur::Routes.draw(map)
   
   # The priority is based upon order of creation: first created -> highest priority.
 
