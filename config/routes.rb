@@ -1,6 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
     
-  map.resources :sermons  
+  map.resources :sermons, :verses 
 
   map.sign_up '/sign_up', :controller => 'sermons', :action => 'index'
   

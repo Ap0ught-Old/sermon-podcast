@@ -7,7 +7,15 @@
   <b>Date:</b>
   <%=h @sermon.date %>
 </p>
-
+<p>
+  <b>Verses:</b>
+	<% Verse.find(:all, :conditions => {:sermon_id => @sermon.id}).each do |v| %>
+  	<%=h v.book %>
+		<%=h v.chapter %>:
+		<%=h v.begin%> -
+		<%=h v.end%>,
+	<% end %>
+</p>
 <p>
   <b>Description:</b>
   <%=h @sermon.description %>
@@ -16,6 +24,7 @@
 	<audio src="<%=@sermon.audio %>" controls="controls"> Your browser does not support HTML audio</audio>
 </p>
 
-
-<%= link_to 'Edit', edit_sermon_path(@sermon) %> |
-<%= link_to 'Back', sermons_path %>
+<% if current_user != nil && current_user.admin == true %>
+	<%= link_to 'Edit', edit_sermon_path(@sermon) %> |
+<% end %>
+<%= link_to 'Back To Index', sermons_path %>

@@ -4,11 +4,11 @@ class SermonsController < ApplicationController
   # GET /sermons
   # GET /sermons.xml
   def index
-    @sermons = Sermon.find(:all, :limit => 5, :order => 'date desc')
+    @sermons = Sermon.find(:all, :limit => 3, :order => 'date desc')
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @sermons }
+      format.xml  { render :rss => @sermons }
     end
   end
 
@@ -27,7 +27,8 @@ class SermonsController < ApplicationController
   # GET /sermons/new.xml
   def new
     @sermon = Sermon.new
-
+    @verse = Verse.new
+    
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @sermon }

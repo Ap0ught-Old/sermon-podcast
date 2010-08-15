@@ -1,5 +1,3 @@
-
-
 <div id='sermons'>
 	<table>
 		<% @sermons.each do |sermon| %>
@@ -23,7 +21,6 @@
 			    <p><%= link_to 'Destroy', sermon, :confirm => 'Are you sure?', :method => :delete %></p>
 				<% end %>
 		 </div>
-		<br />
 		<% end %>
 	</table>
 </div>
