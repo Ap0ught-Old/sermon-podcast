@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100814031856) do
+ActiveRecord::Schema.define(:version => 20100815001427) do
 
   create_table "sermons", :force => true do |t|
     t.string   "title"
@@ -38,5 +38,16 @@ ActiveRecord::Schema.define(:version => 20100814031856) do
   add_index "users", ["email"], :name => "index_users_on_email"
   add_index "users", ["id", "confirmation_token"], :name => "index_users_on_id_and_confirmation_token"
   add_index "users", ["remember_token"], :name => "index_users_on_remember_token"
+
+  create_table "verses", :force => true do |t|
+    t.string   "book"
+    t.integer  "begin"
+    t.integer  "end"
+    t.text     "text"
+    t.integer  "sermon_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "chapter"
+  end
 
 end

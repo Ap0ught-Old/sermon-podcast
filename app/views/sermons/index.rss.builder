@@ -2,7 +2,7 @@
 xml.instruct! :xml, :version => "1.0" 
 xml.rss :version => "2.0" do
   xml.channel do
-    xml.title "Trinity United Methodist Church, PBG FL"
+    xml.title "Community Covenant Church"
     xml.description "Sermons"
     xml.link formatted_articles_url(:rss)
     
